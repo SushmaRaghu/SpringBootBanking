@@ -1,60 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.example.paul</groupId>
-	<artifactId>Banking</artifactId>
-	<version>0.0.1</version>
-	<name>Banking</name>
-	<description>Demo banking project for Spring Boot</description>
+<ns0:project xmlns:ns0="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <ns0:modelVersion>4.0.0</ns0:modelVersion>
+    <ns0:parent>
+        <ns0:groupId>org.springframework.boot</ns0:groupId>
+        <ns0:artifactId>spring-boot-starter-parent</ns0:artifactId>
+        <ns0:version>2.7.18</ns0:version>
+        <ns0:relativePath />
+    </ns0:parent>
+    <ns0:groupId>com.example.paul</ns0:groupId>
+    <ns0:artifactId>Banking</ns0:artifactId>
+    <ns0:version>0.0.1</ns0:version>
+    <ns0:name>Banking</ns0:name>
+    <ns0:description>Demo banking project for Spring Boot</ns0:description>
 
-	<properties>
-		<java.version>17</java.version>
-	</properties>
+    <ns0:properties>
+        <ns0:java.version>17</ns0:java.version>
+    </ns0:properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <ns0:dependencies>
+        <ns0:dependency>
+            <ns0:groupId>org.springframework.boot</ns0:groupId>
+            <ns0:artifactId>spring-boot-starter-data-jpa</ns0:artifactId>
+        </ns0:dependency>
+        <ns0:dependency>
+            <ns0:groupId>org.springframework.boot</ns0:groupId>
+            <ns0:artifactId>spring-boot-starter-validation</ns0:artifactId>
+        </ns0:dependency>
+        <ns0:dependency>
+            <ns0:groupId>org.springframework.boot</ns0:groupId>
+            <ns0:artifactId>spring-boot-starter-web</ns0:artifactId>
+        </ns0:dependency>
 
-		<dependency>
-			<groupId>com.github.mifmif</groupId>
-			<artifactId>generex</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <ns0:dependency>
+            <ns0:groupId>com.github.mifmif</ns0:groupId>
+            <ns0:artifactId>generex</ns0:artifactId>
+            <ns0:version>1.0.2</ns0:version>
+        </ns0:dependency>
+        <ns0:dependency>
+            <ns0:groupId>com.h2database</ns0:groupId>
+            <ns0:artifactId>h2</ns0:artifactId>
+        </ns0:dependency>
+        <ns0:dependency>
+            <ns0:groupId>org.springframework.boot</ns0:groupId>
+            <ns0:artifactId>spring-boot-starter-test</ns0:artifactId>
+            <ns0:scope>test</ns0:scope>
+        </ns0:dependency>
+    </ns0:dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-        </plugins>
-	</build>
+    <ns0:build>
+        <ns0:plugins>
+            <ns0:plugin>
+                <ns0:groupId>org.springframework.boot</ns0:groupId>
+                <ns0:artifactId>spring-boot-maven-plugin</ns0:artifactId>
+            </ns0:plugin>
+        </ns0:plugins>
+    </ns0:build>
 
-</project>
+</ns0:project>
