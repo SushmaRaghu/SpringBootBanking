@@ -1,7 +1,9 @@
 name: Update POM and Dockerfile
 
 on:
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  push:
+    branches:
+      - 'new'  # This will trigger on push to any branch. Modify to specific branches if needed (e.g., 'main', 'feature/*')
 
 jobs:
   update_files:
@@ -35,4 +37,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add pom.xml Dockerfile
           git commit -m "Update versions in pom.xml and Dockerfile" || echo "No changes to commit"
-          git push
+          git push origin $GITHUB_REF  # Ensure the changes are pushed to the same branch
