@@ -29,4 +29,3 @@ jobs:
       # Step 4: Run the Python script
       - name: Run update script
         run: python updateVersionsPOMDocker.py  # Replace with the path to your script
- 
