@@ -1,1 +1,1 @@
-trigger workflow 12
+trigger workflow
