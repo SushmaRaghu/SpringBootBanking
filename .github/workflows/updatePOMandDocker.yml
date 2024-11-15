@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - 'new'  # This will trigger on push to any branch. Modify to specific branches if needed (e.g., 'main', 'feature/*')
+permissions:
+  contents: read
+  actions: read
+  checks: write
+  security-events: write
 
 jobs:
   update_files:
