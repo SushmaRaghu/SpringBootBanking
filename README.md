@@ -1,1 +1,1 @@
- sample trigger workflow
+trigger workflow
