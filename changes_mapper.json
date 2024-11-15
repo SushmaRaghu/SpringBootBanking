@@ -1,0 +1,104 @@
+{
+    "summary": {
+        "application_name": "sb-banking",
+        "number_of_PRs": 3,
+        "confidence_factor": "High",
+        "savings": "61%",
+        "risk_card": [
+            2,
+            26,
+            29,
+            0,
+            0
+        ]
+    },
+    "meta_data": {
+	  "repo_name": "Spring-boot-Banking",
+	  "org_name": "reva",
+	  "repo_url": "https://github.ibm.com/reva/Spring-boot-Banking.git"
+	},
+    "pull_requests": [
+        {
+            "name": "PR3",
+            "risk_card": [
+                0,
+                7,
+                5,
+                0,
+                0
+            ],
+            "changes": [
+                {
+                    "package": "org.springframework.boot:spring-boot-starter-parent",
+                    "package_type": "application",
+                    "current_version": "2.7.0",
+                    "upgrade_version": "2.7.18",
+                    "risk_card_current": [
+                        1,
+                        18,
+                        15,
+                        0,
+                        0
+                    ],
+                    "risk_card_upgrade": [
+                        1,
+                        11,
+                        10,
+                        0,
+                        0
+                    ],
+                    "savings": "reduce risk by 100.0%",
+                    "confidence_factor": "High"
+                },
+                {
+                    "package": "eclipse-temurin",
+                    "package_type": "os",
+                    "current_version": "17.0.3_7-jdk-alpine",
+                    "upgrade_version": "17.0.13_11-jdk-alpine",
+                    "risk_card_current": [
+                        1,
+                        8,
+                        14,
+                        0,
+                        0
+                    ],
+                    "risk_card_upgrade": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "savings": "reduce risk by 100.0%",
+                    "confidence_factor": "High"
+                }
+            ],
+            "affected_packages": [
+                {
+                    "package_name": "ch.qos.logback:logback-classic",
+                    "current_version": "1.2.11",
+                    "upgrade_version": "1.2.13",
+                    "risk_card": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "package_name": "ch.qos.logback:logback-core",
+                    "current_version": "1.2.11",
+                    "upgrade_version": "1.2.13",
+                    "risk_card": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        }
+    ]
+}
