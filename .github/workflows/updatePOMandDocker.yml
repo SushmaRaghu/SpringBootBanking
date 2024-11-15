@@ -1,0 +1,32 @@
+name: Update POM and Dockerfile
+
+on:
+  push:
+    branches:
+      - 'new'  # This will trigger on push to any branch. Modify to specific branches if needed (e.g., 'main', 'feature/*')
+
+jobs:
+  update_files:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Specify the version of Python you want to use (e.g., '3.10')
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install lxml
+
+      # Step 4: Run the Python script
+      - name: Run update script
+        run: python updateVersionsPOMDocker.py  # Replace with the path to your script
+ 
