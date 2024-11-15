@@ -1,7 +1,8 @@
-from lxml import etree
+import os
+import subprocess
 import json
 import re
-import subprocess
+from lxml import etree
 
 def update_pom_and_docker(json_file, pom_file, docker_file):
     # Load JSON data
@@ -89,11 +90,26 @@ def update_pom_and_docker(json_file, pom_file, docker_file):
         dockerfile.write(updated_dockerfile_content)
     print(f"\nDockerfile updated successfully!")
 
-    # Run Git commands to commit and push changes
-    subprocess.run(["git", "add", pom_file, docker_file])
-    subprocess.run(["git", "commit", "-m", "Updated versions in pom.xml and Dockerfile based on update_info.json"])
-    subprocess.run(["git", "push"])
-    print("\nChanges committed and pushed to the repository.")
+    # Get the repository URL from the environment (ensure to use HTTPS URL)
+    repo_url = os.getenv("REPO_URL", "https://github.com/SushmaRaghu/SpringBootBanking.git")
+
+    # Get GitHub token for authentication (ensure token is set in environment or as a secret)
+    github_token = os.getenv("GITHUB_TOKEN")
+
+    if github_token:
+        # Set the Git user configurations
+        subprocess.run(["git", "config", "--global", "user.name", "GitHub Actions Bot"])
+        subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"])
+        
+        # Commit and push the changes using the provided token for authentication
+        subprocess.run(["git", "add", pom_file, docker_file])
+        subprocess.run(["git", "commit", "-m", "Update versions in pom.xml and Dockerfile based on update_info.json"])
+
+        # Push with authentication using the token
+        subprocess.run(["git", "push", f"https://{github_token}@{repo_url[8:]}"])
+        print("\nChanges committed and pushed to the repository.")
+    else:
+        print("GitHub token not found. Please provide a valid token.")
 
 # Example usage:
 update_pom_and_docker('./changes_mapper.json', './pom.xml', './Dockerfile')
