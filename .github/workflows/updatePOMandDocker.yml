@@ -29,12 +29,4 @@ jobs:
       # Step 4: Run the Python script
       - name: Run update script
         run: python updateVersionsPOMDocker.py  # Replace with the path to your script
-
-      # Step 5: Commit and push changes (if needed)
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add pom.xml Dockerfile
-          git commit -m "Update versions in pom.xml and Dockerfile" || echo "No changes to commit"
-          git push origin $GITHUB_REF  # Ensure the changes are pushed to the same branch
+ 
