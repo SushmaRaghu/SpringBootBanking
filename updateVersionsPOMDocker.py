@@ -96,4 +96,4 @@ def update_pom_and_docker(json_file, pom_file, docker_file):
     print("\nChanges committed and pushed to the repository.")
 
 # Example usage:
-update_pom_and_docker('./update_changes.json', './pom.xml', './Dockerfile')
+update_pom_and_docker('./changes_mapper.json', './pom.xml', './Dockerfile')
