@@ -3,7 +3,7 @@ name: Update POM and Dockerfile
 on:
   push:
     branches:
-      - 'new'  # This will trigger on push to any branch. Modify to specific branches if needed (e.g., 'main', 'feature/*')
+      - '**'  # This will trigger on push to any branch. Modify to specific branches if needed (e.g., 'main', 'feature/*')
 permissions:
   contents: read
   actions: read
